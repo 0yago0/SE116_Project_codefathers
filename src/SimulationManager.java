@@ -1,8 +1,13 @@
 public class SimulationManager {
-    public void runSimulation(int totalTicks){
+    public void runSimulation(int totalTicks , char[][] cityMap){
         for(int tick=1;tick <= totalTicks ; tick++){
             System.out.println();
             System.out.println("Tick " + tick + " started.");
+
+            System.out.println("City Map currently :");
+            printMap(cityMap);
+            System.out.println();
+
             distributeServices();
             distributeUtilities();
             if(tick > 1 )  {
@@ -26,7 +31,7 @@ public class SimulationManager {
         System.out.println("Utilities are distributed!");
     }
     public void distributePreviousProduction(){
-        System.out.println("Previous producitons are distributed");
+        System.out.println("Previous productions are distributed");
     }
     public void updateZones(){
         System.out.println("Zones upgraded");
@@ -34,6 +39,14 @@ public class SimulationManager {
     public void collectProduction(){
         System.out.println("Collected");
 
+    }
+    public void printMap(char[][] map){
+        for (int i = 0 ; i< map.length ; i++){
+            for (int j = 0; j< map[i].length; j++ ){
+                System.out.print(map[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 
 }
