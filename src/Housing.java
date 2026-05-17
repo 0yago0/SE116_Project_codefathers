@@ -1,9 +1,9 @@
 public class Housing extends BaseZone {
     public Housing() {
+
         super();
     }
 
-    //output calculation task1
     @Override
     public int calculateOutput() {
         int currentLevel = getLevel();
@@ -20,7 +20,6 @@ public class Housing extends BaseZone {
         return 0;
     }
 
-    //seviye atlama düşme task2
     @Override
     public void updateLevel() {
         if (getM() == 0 && getLevel() > 0) {

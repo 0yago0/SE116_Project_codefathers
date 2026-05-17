@@ -57,4 +57,3 @@ public abstract class BaseZone {
 
     public abstract void updateLevel();
 }
-

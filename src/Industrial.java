@@ -1,5 +1,6 @@
 public class Industrial extends BaseZone {
     public Industrial() {
+
         super();
     }
 
